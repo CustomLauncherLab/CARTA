@@ -20,15 +20,14 @@ process.traceProcessWarnings = true
 process.traceDeprecation = true
 
 // Disable eval function.
-// eslint-disable-next-line
 window.eval = global.eval = function () {
     throw new Error('Sorry, this app does not support window.eval().')
 }
 
 // Display warning when devtools window is opened.
 remote.getCurrentWebContents().on('devtools-opened', () => {
-    console.log('%c방송 노출에 주의해주세요.', 'color: white; -webkit-text-stroke: 4px #a02d2a; font-size: 60px; font-weight: bold');
-    console.log('%c만약 여기에 무언가를 붙여넣도록 요청을 받으셨다면 무시하여 주세요.', 'color: RED; font-size: 30px');
+    console.log('%c방송 노출에 주의해주세요.', 'color: white; -webkit-text-stroke: 4px #a02d2a; font-size: 60px; font-weight: bold')
+    console.log('%c만약 여기에 무언가를 붙여넣도록 요청을 받으셨다면 무시하여 주세요.', 'color: RED; font-size: 30px')
 })
 
 // Disable zoom, needed for darwin.
