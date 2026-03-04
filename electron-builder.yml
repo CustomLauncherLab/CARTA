@@ -14,11 +14,10 @@ extraResources:
   - 'libraries'
 
 # Windows Configuration
-win: 
-  target: 
+win:
+  target:
     - target: 'nsis'
       arch: 'x64'
-  signingHashAlgorithms: []
 
 # Windows Installer Configuration
 nsis:
